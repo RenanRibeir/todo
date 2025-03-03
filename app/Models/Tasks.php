@@ -9,4 +9,12 @@ class Tasks extends Model
 {
     /** @use HasFactory<\Database\Factories\TasksFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        "todo_list_id",
+        "title",
+        "description",
+        "is_completed",
+        "deadline",
+    ];
 }

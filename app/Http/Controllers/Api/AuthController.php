@@ -12,6 +12,12 @@ class AuthController extends Controller
 {
     use ApiResponses;
 
+    /**
+     * Login
+     *@unauthenticated
+     * @param ApiLoginRequest $request
+     * @return \Illuminate\Http\Response
+     */
     public function login(ApiLoginRequest $request)
     {
         if (!Auth::attempt($request->only('email', 'password'))) {
