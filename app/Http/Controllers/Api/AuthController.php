@@ -8,6 +8,11 @@ use App\Models\User;
 use App\Traits\ApiResponses;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @group Authentication
+ *
+ * Endpoints for managing authentication.
+ */
 class AuthController extends Controller
 {
     use ApiResponses;

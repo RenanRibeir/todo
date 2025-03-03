@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\NotificationsController;
 use App\Http\Controllers\Api\TasksController;
 use App\Http\Controllers\Api\TodoListController;
 use Illuminate\Support\Facades\Route;
@@ -19,4 +20,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/task/show/{id}', [TasksController::class, 'show']);
   Route::put('/task/update/{id}', [TasksController::class, 'update']);
   Route::delete('/task/destroy/{id}', [TasksController::class, 'destroy']);
+
+
+  Route::get('/notification/', [NotificationsController::class, 'index']);
+  Route::post('/notification/store', [NotificationsController::class, 'store']);
+  Route::get('/notification/show/{id}', [NotificationsController::class, 'show']);
+  Route::put('/notification/update/{id}', [NotificationsController::class, 'update']);
+  Route::delete('/notification/destroy/{id}', [NotificationsController::class, 'destroy']);
 });

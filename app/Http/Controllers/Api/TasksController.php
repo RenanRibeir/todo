@@ -8,7 +8,7 @@ use App\Http\Resources\TaskResource;
 use App\Services\TaskService;
 
 /**
- * @group Tasks
+ * @group Task
  *
  * Endpoints for managing tasks in a Todo List.
  */
