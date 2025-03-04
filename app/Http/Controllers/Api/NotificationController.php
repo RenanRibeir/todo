@@ -12,7 +12,7 @@ use App\Services\NotificationService;
  *
  * Endpoints for managing notifications.
  */
-class NotificationsController extends Controller
+class NotificationController extends Controller
 {
     protected NotificationService $notificationService;
 

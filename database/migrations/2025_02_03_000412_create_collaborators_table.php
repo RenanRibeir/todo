@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('todo_list_id')->constrained('todo_lists')->onDelete('cascade');
+            $table->unique(['user_id', 'todo_list_id']);
             $table->timestampsTz();
         });
     }

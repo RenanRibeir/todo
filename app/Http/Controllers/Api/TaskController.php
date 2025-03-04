@@ -12,7 +12,7 @@ use App\Services\TaskService;
  *
  * Endpoints for managing tasks in a Todo List.
  */
-class TasksController extends Controller
+class TaskController extends Controller
 {
     protected TaskService $taskService;
 
