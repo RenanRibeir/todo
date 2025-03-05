@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CollaboratorController;
 use App\Http\Controllers\Api\NotificationController;
+use App\Http\Controllers\Api\ScoutController;
 use App\Http\Controllers\Api\TaskController;
 use App\Http\Controllers\Api\TodoListController;
 use Illuminate\Support\Facades\Route;
@@ -34,4 +35,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/collaborator/show/{id}', [CollaboratorController::class, 'show']);
   Route::put('/collaborator/update/{id}', [CollaboratorController::class, 'update']);
   Route::delete('/collaborator/destroy/{id}', [CollaboratorController::class, 'destroy']);
+
+
+  Route::get('/search/todos', [ScoutController::class, 'searchTodos']);
+  Route::get('/search/tasks', [ScoutController::class, 'searchTasks']);
 });

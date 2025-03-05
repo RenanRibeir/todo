@@ -12,7 +12,9 @@
         "php": "^8.2",
         "laravel/framework": "^11.31",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.9"
+        "laravel/scout": "^10.13",
+        "laravel/tinker": "^2.9",
+        "meilisearch/meilisearch-php": "^1.13"
     },
     "require-dev": {
         "darkaonline/l5-swagger": "^9.0",
