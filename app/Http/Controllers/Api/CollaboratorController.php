@@ -9,7 +9,7 @@ use App\Services\CollaboratorService;
 /**
  * @group Collaborator
  *
- * Endpoints for managing tasks in a Todo List.
+ * Endpoints for managing collaborators.
  */
 class CollaboratorController extends Controller
 {
@@ -20,6 +20,9 @@ class CollaboratorController extends Controller
         $this->collaboratorService = $collaboratorService;
     }
 
+    /**
+     * Get a list of collaborators.
+     */
     public function index()
     {
         return response()->json([
@@ -27,7 +30,9 @@ class CollaboratorController extends Controller
         ]);
     }
 
-
+    /**
+     * Create a new collaborator.
+     */
     public function store(CollaboratorRequest $request)
     {
         return response()->json([
@@ -35,6 +40,9 @@ class CollaboratorController extends Controller
         ]);
     }
 
+    /**
+     * Get a collaborator by ID.
+     */
     public function show(string $id)
     {
         return response()->json([
@@ -42,6 +50,9 @@ class CollaboratorController extends Controller
         ]);
     }
 
+    /**
+     * Update an existing collaborator.
+     */
     public function update(CollaboratorRequest $request, string $id)
     {
         return response()->json([
@@ -49,6 +60,9 @@ class CollaboratorController extends Controller
         ]);
     }
 
+    /**
+     * Delete a collaborator.
+     */
     public function destroy(string $id)
     {
         return response()->json([

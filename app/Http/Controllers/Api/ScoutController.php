@@ -14,12 +14,18 @@ use Illuminate\Http\Request;
  */
 class ScoutController extends Controller
 {
+    /**
+     * Search for todos based on a query.
+     */
     public function searchTodos(Request $request)
     {
         $query = $request->input('q');
         return TodoList::search($query)->get();
     }
 
+    /**
+     * Search for tasks based on a query.
+     */
     public function searchTasks(Request $request)
     {
         $query = $request->input('q');

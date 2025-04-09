@@ -21,6 +21,9 @@ class NotificationController extends Controller
         $this->notificationService = $notificationService;
     }
 
+    /**
+     * Get a list of notifications.
+     */
     public function index()
     {
         return response()->json([
@@ -28,7 +31,9 @@ class NotificationController extends Controller
         ]);
     }
 
-
+    /**
+     * Create a new notification.
+     */
     public function store(NotificationRequest $request)
     {
         return response()->json([
@@ -36,6 +41,9 @@ class NotificationController extends Controller
         ]);
     }
 
+    /**
+     * Get a notification by ID.
+     */
     public function show(string $id)
     {
         return response()->json([
@@ -43,6 +51,9 @@ class NotificationController extends Controller
         ]);
     }
 
+    /**
+     * Update an existing notification.
+     */
     public function update(NotificationRequest $request, string $id)
     {
         return response()->json([
@@ -50,6 +61,9 @@ class NotificationController extends Controller
         ]);
     }
 
+    /**
+     * Delete a notification.
+     */
     public function destroy(string $id)
     {
         return response()->json([
