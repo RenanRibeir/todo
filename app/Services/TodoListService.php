@@ -6,12 +6,13 @@ use App\DTOs\TodoListDTO;
 use App\Models\TodoList;
 use App\Repositories\TodoListRepository;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
-class TodoListService extends Service
+class TodoListService extends CachedService
 {
   public function __construct(TodoListRepository $repository)
   {
-    parent::__construct($repository);
+    parent::__construct($repository, 'todo_lists', 60);
   }
 
   //TODO: turn array into DTO class
@@ -19,7 +20,7 @@ class TodoListService extends Service
   {
     $userId = Auth::user()->id;
     $todoListDTO = new TodoListDTO($data['title'], $userId);
-
+    Cache::forget($this->cacheKey . '.all');
     return $this->repository->create((array) $todoListDTO);
   }
 }

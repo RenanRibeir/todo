@@ -7,8 +7,8 @@ Conceitos aplicados:
 -   [ ] websocket
 -   [x] middleware
 -   [x] laravel scout
--   [ ] jobs
--   [ ] filas
+-   [x] jobs
+-   [x] filas
 -   [ ] cache
 -   [ ] telemetria: horizon e telescope
 
