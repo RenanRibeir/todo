@@ -9,7 +9,7 @@ Conceitos aplicados:
 -   [x] laravel scout
 -   [x] jobs
 -   [x] filas
--   [ ] cache
+-   [x] cache
 -   [ ] telemetria: horizon e telescope
 
 ## Diagrama do banco de dados atual
@@ -27,7 +27,7 @@ git clone https://github.com/usuário/meu-primeiro-projeto-laravel.git
 2. Instale as dependências:
 
 ```bash
-cd meu-primeiro-projeto-laravel
+cd todo
 composer install
 ```
 

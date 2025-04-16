@@ -20,7 +20,6 @@ class TodoListService extends CachedService
   {
     $userId = Auth::user()->id;
     $todoListDTO = new TodoListDTO($data['title'], $userId);
-    Cache::forget($this->cacheKey . '.all');
-    return $this->repository->create((array) $todoListDTO);
+    return parent::store((array) $todoListDTO);
   }
 }
