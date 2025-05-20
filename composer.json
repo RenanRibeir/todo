@@ -13,6 +13,7 @@
         "laravel/framework": "^11.31",
         "laravel/sanctum": "^4.0",
         "laravel/scout": "^10.13",
+        "laravel/telescope": "^5.7",
         "laravel/tinker": "^2.9",
         "meilisearch/meilisearch-php": "^1.13",
         "predis/predis": "^2.3"
